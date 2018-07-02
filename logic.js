@@ -12,9 +12,7 @@ function createFeatures(earthquakeData) {
         weight: 0.5,
         fillOpacity: 0.5 + feature.properties.mag*0.05
       });
-      circle.bindPopup("<h3>" + feature.properties.place +
-      "</h3><hr><p>" + new Date(feature.properties.time) + "</p>"  +  
-      "Magnitude: " + feature.properties.mag);
+      circle.bindPopup("<h3>" + feature.properties.place + "</h3><hr><p>" + new Date(feature.properties.time) + "</p> Magnitude: " + feature.properties.mag);
       return circle;
     }
   });
